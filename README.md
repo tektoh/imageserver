@@ -6,12 +6,29 @@ imageserver
 GET
 ---
 
-* 画像処理をURLパラメーターで指定。
+* 画像サイズをURLパラメーターで指定。
 
-POST
-----
+* /*IMAGE_ID*/*SIZE*.*EXT*
+    * SIZE: origin, full, large, middle, small, icon ...
+    * EXT: jpg, png
+
+POST, PUT
+---------
 
 * 画像をアップロードして保存する。必要なら加工する。
+
+* /[*IMAGE_ID*]
+    * token: AUTH TOKEN
+    * rpc:
+    * filename:
+    * file:
+
+DELETE
+------
+
+* 画像を削除する
+
+* /*IMAGE_ID*
 
 Hook
 ----
