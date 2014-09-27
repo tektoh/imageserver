@@ -3,13 +3,17 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     go: {
-      imageserver: {
-        output: "imageserver",
-        run_files: ['main.go']
+      options: {
+       GOPATH: ["../../../.."]
+      },
+      imageserver: {},
+      main: {
+        //root: "_examples",
+        run_files: ['_examples/main.go']
       }
     },
     watch: {
-      files: ['*.go'],
+      files: ['**/*.go'],
       tasks: ['build', 'test']
     }
   });
@@ -20,5 +24,5 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('build', ['go:build:imageserver']);
   grunt.registerTask('test', ['go:test:imageserver']);
-  grunt.registerTask('run', ['build', 'go:run:imageserver']);
+  grunt.registerTask('run', ['build', 'go:run:main']);
 };
