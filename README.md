@@ -1,6 +1,8 @@
 imageserver
 ===========
 
+[![Build Status](https://travis-ci.org/tektoh/imageserver.svg?branch=master)](https://travis-ci.org/tektoh/imageserver)
+
 こんなかんじの画像サーバーつくるよてい
 
 GET
