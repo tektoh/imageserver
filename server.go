@@ -5,6 +5,6 @@ import (
 )
 
 func Run() {
-	http.HandleFunc("/", Handler(NewRequestDispatcher()))
+	http.Handle("/", NewRouter())
 	http.ListenAndServe(":8080", nil)
 }
