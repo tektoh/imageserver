@@ -21,7 +21,7 @@ GET
 
 
 ```
-GET /*IMAGE_ID*/*SIZE*.*EXT*
+GET /IMAGE_ID/SIZE.EXT
    SIZE: origin, full, large, middle, small, icon ...
    EXT: jpg, png
 ```
@@ -37,7 +37,7 @@ POST
 * 外部のAPIサーバーに対して画像のメタ情報をPOSTする
 
 ```
-POST /[*IMAGE_ID*]
+POST /[IMAGE_ID]
    token: AUTH TOKEN
    filename:
    file:
@@ -48,5 +48,6 @@ DELETE
 
 * 画像を削除する
 
-* /*IMAGE_ID*
-
+```
+DELETE /IMAGE_ID
+```
