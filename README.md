@@ -8,7 +8,7 @@ imageserver
 Architecture
 -------------
 
-* GoogleAppengine
+* GoogleAppEngine
 * GoogleCloudStorage
 
 GET
