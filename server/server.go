@@ -1,10 +1,14 @@
-package imageserver
+package server
 
 import (
 	"net/http"
 )
 
 func Run() {
-	http.Handle("/", NewRouter())
+	Handle()
 	http.ListenAndServe(":8080", nil)
+}
+
+func Handle() {
+	http.Handle("/", NewRouter())
 }

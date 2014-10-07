@@ -4,12 +4,13 @@ module.exports = function (grunt) {
   grunt.initConfig({
     go: {
       options: {
-       GOPATH: ["../../../.."]
+       GOPATH: ["_vendor", "../../../.."]
       },
-      imageserver: {},
+      imageserver: {
+        test_flags: ["-cover"],
+      },
       main: {
-        //root: "_examples",
-        run_files: ['_examples/main.go']
+        run_files: ['main.go']
       }
     },
     watch: {

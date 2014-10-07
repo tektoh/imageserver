@@ -1,4 +1,4 @@
-package imageserver
+package server
 
 import (
     "testing"
