@@ -1,4 +1,4 @@
-package imageserver
+package server
 
 import (
 	"github.com/gorilla/mux"
@@ -29,6 +29,6 @@ func NewRouter() http.Handler {
 		m.Path(r.Path)
 		m.HandlerFunc(r.Handler)
 	}
-	
+
 	return router
 }
